@@ -34,11 +34,11 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    for (i=0;i<=5;i++){
+    for (i=1;i<6;i++){
         let playerSelection = prompt('Write rock, paper, or scissors: ').toLowerCase();
         const computerSelection = computerPlay()
         console.log('Round: '+i)
         console.log(playRound(playerSelection, computerSelection));
     }
 }
-console.log(game());
+game();
