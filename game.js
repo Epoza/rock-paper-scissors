@@ -14,7 +14,7 @@ function computerPlay() {
     return console.log(randomSelection)
 }
 
-const playerSelection = 'rock';
+let playerSelection = prompt('Write rock, paper, or scissors: ').toLowerCase();
 const computerSelection = computerPlay();
 let computerPoints = 0
 let playerPoints = 0
@@ -38,25 +38,17 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
-    for (i=1;i<6;i++){
-        let playerSelection = prompt('Write rock, paper, or scissors: ').toLowerCase();
-        const computerSelection = computerPlay()
-        console.log('Round: '+i)
-        console.log(playRound(playerSelection, computerSelection));
-        if (i == 5){
-            if (playerPoints > computerPoints){
-                console.log(`WINNER WINNER! you had ${playerPoints} points and the computer had ${computerPoints} points`)
-            }
-            else if (playerPoints < computerPoints){
-                return console.log(`Aww you lost! you had ${playerPoints} points and the computer had ${computerPoints} points`)
-            }
-            else{
-                return console.log(`Tie you both had ${playerPoints} points`)
-            }
+    const computerSelection = computerPlay()
+
+    console.log(playRound(playerSelection, computerSelection));
+        if (playerPoints > computerPoints){
+            console.log(`WINNER WINNER! you had ${playerPoints} points and the computer had ${computerPoints} points`)
+        }
+        else if (playerPoints < computerPoints){
+            return console.log(`Aww you lost! you had ${playerPoints} points and the computer had ${computerPoints} points`)
         }
         else{
-            continue
+            return console.log(`Tie you both had ${playerPoints} points`)
         }
     }
-}
 game();
