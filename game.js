@@ -1,5 +1,12 @@
 let randomSelection = 0
+const displayUser = document.getElementById('player-choice')
+let playerSelection
+const computerSelection = computerPlay();
+const displayComputer = document.getElementById('computer-choice')
+let computerPoints = 0
+let playerPoints = 0
 
+// Get a random number for computer
 function computerPlay() {
     let randomSelection = Math.floor(Math.random()*3);
     if (randomSelection === 0){
@@ -13,11 +20,6 @@ function computerPlay() {
     }
     return console.log(randomSelection)
 }
-
-let playerSelection = prompt('Write rock, paper, or scissors: ').toLowerCase();
-const computerSelection = computerPlay();
-let computerPoints = 0
-let playerPoints = 0
 
 function playRound(playerSelection, computerSelection){
 
@@ -51,4 +53,11 @@ function game(){
             return console.log(`Tie you both had ${playerPoints} points`)
         }
     }
-game();
+
+    // Listen for button click then display it
+const buttons = document.querySelectorAll('button')
+
+buttons.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+    playerSelection = e.target.id
+    displayUser.innerHTML = playerSelection
+}))

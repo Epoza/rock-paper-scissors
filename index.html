@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <button class="button-rock">Rock</button>
-        <button class="button-paper">Paper</button>
-        <button class="button-scissors">Scissors</button>
+    <div id="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
     </div>
+
+    <h2>Your choice: <span id="player-choice"></span></h2>
+    <h2>Computer choice: <span id="computer-choice"></span></h2>
+    <h2>Result: <span id="result"></span></h2>
     <script src="game.js">
     </script>
 </body>
