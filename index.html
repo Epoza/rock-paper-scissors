@@ -8,24 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="game-header">
+        <h1>Rock, Paper, Scissors</h1>
+        <h2>First to 5 points Wins!</h2>
+    </div>
+    <h2 class="result"><span id="result"></span></h2>
     <div id="buttons">
         <button class='button' id="rock">Rock</button>
         <button class='button' id="paper">Paper</button>
         <button class='button' id="scissors">Scissors</button>
     </div>
-
-    <h2>You: <span id="player-choice"></span></h2>
-    <h2>Your Points: <span id="player-points"></span></h2>
-    <h2>Computer: <span id="computer-choice"></span></h2>
-    <h2>Computer Points: <span id="computer-points"></span></h2>
-    <h2>Result: <span id="result"></span></h2>
+        <div class="both-display">
+            <div class="player-display">
+                <h2>You: <span id="player-choice"></span></h2>
+                <h2>Your Points: <span id="player-points"></span></h2>
+            </div>
+            <div class="computer-display">
+                <h2>Computer: <span id="computer-choice"></span></h2>
+                <h2>Computer Points: <span id="computer-points"></span></h2>
+            </div>
+        </div>
+    
     <span id="winner"></span>
 
-    <button class="modal-button" id="open-button">Play again</button>
+    <span id="open"></span>
     <div class="modal-container" id="modal-container">
         <div class="modal">
             <span id="winner-text"></span>
-            <button class="modal-button" id="close-button">Play again</button>
+            <button class="modal-button" id="close-button">Play Again</button>
         </div>
     </div>
 

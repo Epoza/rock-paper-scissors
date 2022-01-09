@@ -11,7 +11,7 @@ let playerPoints = 0
 const displayPlayerPoints = document.getElementById('player-points')
 const displayComputerPoints = document.getElementById('computer-points')
 const displayWinner = document.getElementById('winner-text')
-const openButton = document.getElementById('open-button') 
+const open = document.getElementById('open') 
 const modalContainer = document.getElementById('modal-container') 
 const closeButton = document.getElementById('close-button')
 
@@ -51,10 +51,10 @@ function playRound(playerSelection, computerSelection){
     }
     else{
         if (playerPoints > computerPoints){
-            winner = `WINNER WINNER! you had ${playerPoints} points and the computer had ${computerPoints} points`
+            winner = `WINNER WINNER, you had ${playerPoints} points and the computer had ${computerPoints} points!`
         }
         else{
-            winner = `Aww you lost! you had ${playerPoints} points and the computer had ${computerPoints} points`
+            winner = `Aww you lost, you had ${playerPoints} points and the computer had ${computerPoints} points!`
         }
         displayWinner.innerHTML = winner
         // Show the modal when game is over
@@ -62,6 +62,7 @@ function playRound(playerSelection, computerSelection){
 
         // close the modal when clicked
         closeButton.addEventListener('click', () => {
+            location.reload()
             modalContainer.classList.remove('show')
         })
     }
@@ -72,7 +73,7 @@ function playRound(playerSelection, computerSelection){
 
 
     // Show the modal when game is over
-    openButton.addEventListener('click', () => {
+    open.addEventListener('click', () => {
         modalContainer.classList.add('show')
     })
 
