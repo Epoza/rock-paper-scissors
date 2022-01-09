@@ -9,16 +9,26 @@
 </head>
 <body>
     <div id="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+        <button class='button' id="rock">Rock</button>
+        <button class='button' id="paper">Paper</button>
+        <button class='button' id="scissors">Scissors</button>
     </div>
 
     <h2>You: <span id="player-choice"></span></h2>
-    <h2>Your Points: <span id=player-points></span></h2>
+    <h2>Your Points: <span id="player-points"></span></h2>
     <h2>Computer: <span id="computer-choice"></span></h2>
-    <h2>Computer Points: <span id='computer-points'></span></h2>
+    <h2>Computer Points: <span id="computer-points"></span></h2>
     <h2>Result: <span id="result"></span></h2>
+    <span id="winner"></span>
+
+    <button class="modal-button" id="open-button">Play again</button>
+    <div class="modal-container" id="modal-container">
+        <div class="modal">
+            <span id="winner-text"></span>
+            <button class="modal-button" id="close-button">Play again</button>
+        </div>
+    </div>
+
     <script src="game.js">
     </script>
 </body>
